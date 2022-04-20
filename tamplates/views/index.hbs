@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="css/web_develop.css">
+  <title>web_develop</title>
+</head>
+
+<body>
+  {{>navbar}}
+  <div class="main">
+    <h1 class="main_1">Change your thoughts and
+      <br> you’ll change your world..
+    </h1>
+    <div class="login-card">
+      <div class="log_head">
+        <h1>LOGIN</h1>
+        <!-- <img src="lock.jpg" alt="lock" class="lock" /> -->
+      </div>
+
+      <div class="log_body">
+        <form action="/" method="POST">
+          <table width="200">
+            <tr>
+              <td><input  type="text" name="email" class="log_user" placeholder="Email Id"></td>
+            </tr>
+            <tr>
+              <td>&nbsp;</td>
+            </tr>
+            <tr>
+              <td><input  type="password" name="password" class="log_Pass"  placeholder="Password"></td>
+            </tr>
+            <tr>
+              <td>&nbsp;</td>
+            </tr>
+            <tr>
+              <td><input name="remember" type="checkbox" value="Remember Me"> Keep me logged in</td>
+            </tr>
+            <tr>
+              <td>&nbsp;</td>
+            </tr>
+            <tr>
+              <td><button type="submit" name="login" class="login-submit"> submit </button> </td>
+            </tr>
+            <tr>
+              <td>&nbsp;</td>
+            </tr>
+            <tr>
+              <td>Don't have an account ? <a href="/registration" rel="register">Sign Up</a></td>
+            </tr>
+          </table>
+
+        </form>
+      </div>
+    </div>
+  </div>
+
+
+  {{!-- {{>footer}} --}}
+  <script>
+    //  DROPDOWN MENU WITH TOGGLE ICON
+    function _drop(a, b, c) {
+      const d = document.getElementById(a),
+        e = document.getElementById(b).getElementsByTagName('i');
+      d.classList.toggle(c);
+      e[0].classList.toggle('hidden');
+      e[1].classList.toggle('visible')
+    }
+
+    // TOGGLE
+    function _tgl(a, b) {
+      document.getElementById(a).classList.toggle(b)
+    }
+
+    function openSearch() {
+      _drop('thisSearch', 'btnSearch', 'show-search')
+    }
+
+    function openMenu() {
+      _drop('thisMenu', 'btnMenu', 'show-menu')
+    }
+
+
+  </script>
+</body>
+
+</html>

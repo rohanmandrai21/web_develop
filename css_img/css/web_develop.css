@@ -1,0 +1,305 @@
+@import url('https://fonts.googleapis.com/css?family=Acme|Amaranth|Courgette|Fira+Sans+Condensed|Lato|Open+Sans|Oswald|PT+Sans|Raleway|Rancho|Roboto|Sacramento|Roboto+Condensed|Sarala|Signika|Source+Sans+Pro&display=swap');
+@import url('https://use.fontawesome.com/releases/v5.14.0/css/all.css');
+*{
+    margin: 0px;
+    padding: 0px;
+    
+}
+body{
+   background-image: linear-gradient(to top,rgba(
+        0, 0, 0,0.1), rgba(0, 0, 0, 0.1)), url('../img/img1.jpg');;
+        background-size:cover;
+         
+       background-position:50% -20%;  
+} 
+  
+nav {
+    background: #000;
+    width: 100%;
+    position: sticky;
+    top: 0px;
+    z-index: 2;
+  }
+  .block-relative{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content:space-between;
+ 
+  } 
+  .block-relative-left{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content:space-between;
+  }
+  .block-relative-home{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content:space-between;
+  }
+nav a{
+    width: 50px;
+    height: 50px;
+    margin: 0px 10px;
+    color: orange;
+     text-decoration: none;
+    font: 400 16px "Consolas";
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    text-align: center; 
+    vertical-align: middle;
+   
+  }
+nav a:hover, nav button:hover {
+    background: #4d4d4d;
+    color: #fff;
+  }
+nav a:focus, nav button:focus {
+    background: orange;
+    color: black;
+  }
+  #btnSearch{
+      background-color: transparent;
+      color: orange;
+      border: none;
+  }
+.search {
+    background: #eee;
+    width: 0;
+    height: 50px;
+    top: 0;
+    right: 50px;
+    display: block;
+    position: absolute;
+    opacity: 0;
+  }
+.search input {
+    background: transparent;
+    width: 100%;
+    height: 100%;
+    font: 400 16px "Consolas";
+    text-align: center;
+    border: none;
+  }
+  @-webkit-keyframes search {
+    to {
+      width: 150px;
+      opacity: 1;
+    }
+  }
+  @keyframes search {
+    to {
+      width: 150px;
+      opacity: 1;
+    }
+  }
+  .show-search {
+    -webkit-animation: search 0.5s ease both;
+            animation: search 0.5s ease both;
+  }
+  .visible {
+    display: inline-block;
+  }
+   
+  .hidden {
+    display: none;
+  }
+  #btnMenu, .fa-times {
+    display: none;
+  }
+   
+  .btn-list {
+    width: 100px;
+  }
+  .main{
+    display: flex;
+    justify-content: space-evenly;
+
+    text-align: center;
+    top: 50vh;
+    right:22vw;
+    background-color: transparent;
+    /* background-image: linear-gradient(to top,rgba(
+        0, 0, 0,0.1), rgba(0, 0, 0, 0.1)), url('../img/img1.jpg');;
+        background-size:cover;
+         
+       background-position:50% 40%;   */
+       /* background-repeat: repeat-y;  */
+    /* margin:  0 0 50px  0px; */
+  }
+  .main_1{
+    margin: auto 0px;
+  }
+  .login-card {
+  
+    width: 350px;
+    background-color: #7E7E7E;
+     /* margin: 50px 0px ;  */
+    border-radius: 9px;
+    box-shadow: 0px 2px 2px rgba(0, 0, 0,0.3);
+    min-height:340px;
+    opacity: 0.8;
+    top: 140px;
+   right: 50px;
+   margin: 100px 0px;
+   
+  }
+  
+  .log_head{ background:orange; width:350px; height:60px; border-radius:9px 9px 0 0px; }
+  .login-card h1 {
+    text-align: center;
+    font-family:open Sans;
+     color:#FFFFFF;
+    font-weight:700px;
+    font-size:20px;
+    line-height:27px;
+    padding-top: 24px;
+    
+  }
+  
+  /* .lock{ padding-left:181px; width:30px; height:37px; padding-top:10px;} */
+  
+  .log_body{ padding:40px 20px 20px 20px;}
+  
+  .log_user{ background:#FEFEFE; color:#999999; border-radius: 10px; width:299px; height:31px; padding:5px; font-family:open Sans; font-weight:700px; font-size:15px; border:none; }
+  
+  .log_Pass{background:#FEFEFE; color:#999999; border-radius: 10px; width:299px; height:31px; padding:5px; font-family:open Sans; font-weight:700px; font-size:15px; border:none;}
+  .login-submit{
+      border: 1px solid black;
+      border-radius: 2px;
+      background-color: lightblue;
+      padding: 0px 4px;
+      /* background-color:transparent ; */
+
+  }
+  .about{
+    height: 80vh;
+    text-align: center;
+    font-size: 20px;
+    display: flex;
+    flex-direction:row;
+    justify-content: space-between;
+    padding: 10px;
+    border: 2px solid black;
+    margin: 20px;
+  }
+  .about-reverse{
+    height: 80vh;
+    text-align: center;
+    font-size: 20px;
+    display: flex;
+    flex-direction:row row-reverse;
+    justify-content: space-between;
+    padding: 10px;
+    border: 2px solid black;
+    margin: 20px;
+  }
+  .about1{
+    /* border: 2px solid black; */
+    width: 50%;
+    margin: 5vh;
+  }
+  .showpic{
+      /* border: 5px solid red;  */
+  width: 50%;
+    
+  }
+  .showpic img{
+     border: 1px solid black; 
+    width: 100%;
+    height: 60%;
+    margin: 13vh 0vw;
+    border-radius: 7px;
+  }
+  
+
+
+
+ .txt:hover,  .txtbox:hover {
+  background: #4d4d4d;
+  color: #fff;
+}
+ .txt:focus,  .txtbox:focus {
+  background: #4d4d4d;
+  color: black;
+}
+.btn{
+    width: 510px;
+    height: 40px;
+    box-sizing: border-box;
+   background-color: rgb(118, 204, 233);
+   color: black;
+    font-size: 20px;
+    cursor: pointer;
+     border-radius: 2px; 
+     margin: 25px auto;
+    border: 2px solid black; 
+}
+
+#counter{
+  background-image: linear-gradient(to top,rgba(
+    0, 0, 0,0.3), rgba(0, 0, 0, 0.3)), url('../img/img1.jpg');;
+    background-size:cover;
+     background-repeat: no-repeat;
+   background-position:50% 100%;  
+    /* background-color: transparent; */
+  color: black;
+  display: flex;
+  height: 9vh;
+  flex-direction: column;
+  justify-content: space-around;
+   align-items:center; 
+   /* height: 70px; */
+   /* border: 2px black solid; */
+} 
+#counter span{
+    font-size: 20px;
+    color: yellow;
+ }
+  
+  @media (max-width: 607px) {
+    #btnMenu {
+        display: block;
+        position: fixed;
+        top: 0px;
+        right: 0px;
+      /* display: -webkit-box; */
+      /* display: flex; */
+    }
+    nav{
+        display: none;   
+    }
+    .block-relative-left{
+        display: none;
+    }
+    .block-relative-right{
+        display: none;
+    }
+/* 
+    .menu {
+      background: #333;
+      width: 100%;
+      top: 50px;
+      display: none;
+      position: absolute;
+    }
+    .menu button {
+      width: 100%;
+    }
+   
+    .show-menu {
+      display: block;
+    }  */
+    .block-relative{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content:space-between;
+     
+      } 
+
+  }
