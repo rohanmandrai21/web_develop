@@ -40,7 +40,7 @@ nav {
     justify-content:space-between;
   }
 nav a{
-    width: 50px;
+    width: 84px;
     height: 50px;
     margin: 0px 10px;
     color: orange;
@@ -175,7 +175,6 @@ nav a:focus, nav button:focus {
     flex-direction:row;
     justify-content: space-between;
     padding: 10px;
-    border: 2px solid black;
     margin: 20px;
   }
   .about-reverse{
@@ -186,7 +185,6 @@ nav a:focus, nav button:focus {
     flex-direction:row row-reverse;
     justify-content: space-between;
     padding: 10px;
-    border: 2px solid black;
     margin: 20px;
   }
   .about1{
@@ -256,22 +254,29 @@ nav a:focus, nav button:focus {
     #btnMenu {
         display: block;
         position: fixed;
-        top: 0px;
-        right: 0px;
+        top: 5px;
+        right: 5px;
       /* display: -webkit-box; */
       /* display: flex; */
     }
-    nav{
-        display: none;   
+    nav{  
+    }
+    .block-relative-home{
+      flex-direction: column;
+      display: block;
     }
     .block-relative-left{
-        display: none;
+      flex-direction: column;
+      display: block;
     }
     .block-relative-right{
-        display: none;
+      flex-direction: column;
+      display: block;
     }
     .menu_toggle{
+      display: none;
       background-color: pink;
+      flex-direction: column;
     }
     .main{
       display: flex;
@@ -282,27 +287,29 @@ nav a:focus, nav button:focus {
       right:22vw;
       background-color: transparent;
     }
-/* 
-    .menu {
-      background: #333;
-      width: 100%;
-      top: 50px;
-      display: none;
-      position: absolute;
+    .main_1{
+      margin: 10px 0px;
+    } 
+    .login-card {
+     margin: 100px auto;
+     
     }
-    .menu button {
-      width: 100%;
-    }
-   
-    .show-menu {
-      display: block;
-    }  */
     .block-relative{
         display: flex;
         flex-direction: column;
         align-items: center;
         justify-content:space-between;
-     
+        
       } 
+      .about{
+        flex-direction: column;
+        padding: 0px;
+        margin: 0px;
+      }
+      .about1{
+        /* border: 2px solid black; */
+        width: 100%;
+        margin: 5vh;
+      }
 
   }

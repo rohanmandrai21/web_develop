@@ -1,12 +1,12 @@
 <nav class="block-relative">
-   <button class="flexbox" id="btnMenu" onclick="openMenu()">
+   <button class="flexbox" id="btnMenu" onclick="menuOpen()">
       <i class="fa fa-bars"></i>
       <i class="fa fa-times"></i>
    </button>
-   <div class="block-relative-home">
+   <div class="block-relative-home" >
       <a class="flexbox" href="/"><i class="fa fa-2x fa-home"></i></a>
 
-      <div class="block-relative-left">
+      <div class="block-relative-left"id="openMenuBar">
          <!-- <a class="flexbox" href="#"><i class="fa fa-home"></i></a> -->
          <!-- </div> -->
          <!-- <div class="block-relative-left menu" id="thisMenu"> -->
@@ -17,7 +17,7 @@
          <a href="/contact" class="flexbox btn-list">Contact</a>
       </div>
    </div>
-   <div class="block-relative-right">
+   <div class="block-relative-right" id="openMenuBar2">
       <button class="flexbox" id="btnSearch" onclick="openSearch()">
          <i class="fa  fa-2x fa-search"></i>
          <i class="fa fa-2x fa-times"></i>
@@ -27,3 +27,11 @@
       </form>
    </div>
 </nav>
+<script>
+   function menuOpen(){
+          document.getElementById("openMenuBar").classList.toggle("menu_toggle");
+          document.getElementById("openMenuBar2").classList.toggle("menu_toggle");
+          console.log("hello from on click function")
+          // document.getElementById("btnMenu").style.color = "red";
+        } 
+</script>

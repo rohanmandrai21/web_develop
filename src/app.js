@@ -77,6 +77,7 @@ app.post('/contact', async (req, res) => {
             message: req.body.message
         })
         const NewUser1ed = await NewUser1.save();
+        console.log('2nd')
         res.render('index')
     } catch (error) {
         res.status(501).send(error)
