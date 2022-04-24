@@ -55,8 +55,9 @@ nav a{
    
   }
 nav a:hover, nav button:hover {
-    background: #4d4d4d;
-    color: #fff;
+    /* background: #4d4d4d; */
+    color:lightblue;
+    border-bottom: 1px lightblue solid;
   }
 nav a:focus, nav button:focus {
     background: orange;
@@ -187,6 +188,10 @@ nav a:focus, nav button:focus {
     padding: 10px;
     margin: 20px;
   }
+  .about_heading{
+    display: flex;
+    justify-content: center;
+  }
   .about1{
     /* border: 2px solid black; */
     width: 50%;
@@ -267,15 +272,14 @@ nav a:focus, nav button:focus {
     }
     .block-relative-left{
       flex-direction: column;
-      display: block;
+      display: none;
     }
     .block-relative-right{
       flex-direction: column;
-      display: block;
+      display: none;
     }
     .menu_toggle{
-      display: none;
-      background-color: pink;
+      display: block;
       flex-direction: column;
     }
     .main{
@@ -309,7 +313,12 @@ nav a:focus, nav button:focus {
       .about1{
         /* border: 2px solid black; */
         width: 100%;
-        margin: 5vh;
+        margin: 0px;
       }
+      .showpic{
+        margin: 0px auto;
+        width: 75%;
+      
+    }
 
   }

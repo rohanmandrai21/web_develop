@@ -9,7 +9,7 @@ const jwt=require('jsonwebtoken');
 const cookieparser=require('cookie-parser');
 const auth=require('./middleware/auth');
 require("./db/conn");
-const User = require('./models/web_develop');
+const User_contact = require('./models/User_contact');
 const UserRegister = require('./models/web_develop')
 const port = process.env.PORT || 3000;
 const static_path = (path.join(__dirname, "../css_img"));
@@ -69,16 +69,14 @@ app.post('/registration', async (req, res) => {
 });
 app.post('/contact', async (req, res) => {
     try {
-        // res.send(req.body);
-        const NewUser1 = new User({
+        const UserContact = new User_contact({
             firstname: req.body.firstname,
             phone: req.body.phone,
             email: req.body.email,
             message: req.body.message
         })
-        const NewUser1ed = await NewUser1.save();
-        console.log('2nd')
-        res.render('index')
+        const SavedUserContact = await UserContact.save();
+        res.status(201).render('index');
     } catch (error) {
         res.status(501).send(error)
     }
@@ -89,17 +87,12 @@ app.post('/', async (req, res) => {
         const email = req.body.email;
         const password = req.body.password;
         const username = await UserRegister.findOne({ email: email });
-        // console.log(username)
         const ismatch = await bcrypt.compare(password, username.password);
-        // console.log(ismatch)
-        console.log('hello bhai2')
         const token= await username.generate();
-        // console.log(token)
         res.cookie("webcookie",token, {
             expires:new Date(Date.now() + 100000),
             httpOnly:true
         });
-        // console.log('hello bhai')
         if (ismatch) {
             res.render('about')
         } else {

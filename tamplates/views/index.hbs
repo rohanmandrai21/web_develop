@@ -25,13 +25,13 @@
         <form action="/" method="POST">
           <table width="200">
             <tr>
-              <td><input  type="text" name="email" class="log_user" placeholder="Email Id"></td>
+              <td><input type="text" name="email" class="log_user" placeholder="Email Id"></td>
             </tr>
             <tr>
               <td>&nbsp;</td>
             </tr>
             <tr>
-              <td><input  type="password" name="password" class="log_Pass"  placeholder="Password"></td>
+              <td><input type="password" name="password" class="log_Pass" placeholder="Password"></td>
             </tr>
             <tr>
               <td>&nbsp;</td>
@@ -60,31 +60,7 @@
 
 
   {{!-- {{>footer}} --}}
-  <script>
-    //  DROPDOWN MENU WITH TOGGLE ICON
-    function _drop(a, b, c) {
-      const d = document.getElementById(a),
-        e = document.getElementById(b).getElementsByTagName('i');
-      d.classList.toggle(c);
-      e[0].classList.toggle('hidden');
-      e[1].classList.toggle('visible')
-    }
 
-    // TOGGLE
-    function _tgl(a, b) {
-      document.getElementById(a).classList.toggle(b)
-    }
-
-    function openSearch() {
-      _drop('thisSearch', 'btnSearch', 'show-search')
-    }
-
-     function openMenu(){
-          document.getElementById("btnMenu").classList.toggle("menu_toggle")
-        } 
-
-
-  </script>
 </body>
 
 </html>

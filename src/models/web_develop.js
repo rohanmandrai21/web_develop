@@ -4,34 +4,9 @@ const bcrypt = require('bcrypt');
 const jwt = require('jsonwebtoken');
 // const { default: isEmail } = require('validator/lib/isEmail');
 
-const UserSchema = mongoose.Schema({
-    firstname: {
-        type: String,
-        required: true,
-        minLength: 3
-    },
-    phone: {
-        type: Number,
-        required: true,
-        min: 10
-    },
-    email: {
-        type: String,
-        required: true,
-        validate(value) {
-            if (!validator.isEmail(value)) {
-                throw Error('Invalid Email Id')
-            }
-        }
 
-    },
-    message: {
-        type: String,
-        required: true,
-        minLength: 3
-    }
 
-})
+
 const SignSchema = mongoose.Schema({
     fname: {
         type: String,
@@ -99,7 +74,7 @@ SignSchema.pre('save', async function (next) {
     next();
 
 })
-const User = mongoose.model('Contactdetail', UserSchema);
+
 const UserRegister = mongoose.model('UserRegister', SignSchema);
-module.exports = User;
+
 module.exports = UserRegister;
